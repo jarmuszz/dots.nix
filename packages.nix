@@ -1,0 +1,80 @@
+{ environment, pkgs, ... }:
+{
+  nixpkgs.config.allowUnfree = true;
+  nixpkgs.config.permittedInsecurePackages = [ "electron-25.9.0" ];
+
+  environment.systemPackages = with pkgs; [
+    adbfs-rootless
+    android-tools
+    anki
+    brightnessctl
+    calc
+    cmake
+    dconf
+    deadbeef
+    discord
+    docker
+    docker-compose
+    elementary-xfce-icon-theme
+    file
+    firefox
+    foot
+    gcc
+    gcc-arm-embedded-10
+    gimp
+    git
+    gnumake
+    go-font
+    greybird
+    grim
+    helvum
+    home-manager
+    htop
+    hunspell
+    hunspellDicts.pl_PL
+    inkscape-with-extensions
+    jetbrains.idea-community
+    kdeconnect
+    keepassxc
+    libnotify
+    libreoffice
+    mpdevil
+    neofetch
+    nixfmt
+    obsidian
+    pavucontrol
+    pfetch
+    pipewire
+    python3
+    rofi
+    sbt-with-scala-native
+    scala-cli
+    seatd
+    signal-desktop
+    slurp
+    smartmontools
+    sshfs
+    swaybg
+    swaynotificationcenter
+    sxiv
+    syncthing
+    wayfire
+    wl-clipboard
+    xfce.mousepad
+    xfce.thunar
+    xfce.thunar-volman
+    xsane
+    zathura
+    zip
+  ];
+
+  fonts.packages = with pkgs; [
+    noto-fonts
+    noto-fonts-cjk
+    noto-fonts-emoji
+    liberation_ttf
+    fira-code
+    fira-code-symbols
+    mplus-outline-fonts.githubRelease
+  ];
+}

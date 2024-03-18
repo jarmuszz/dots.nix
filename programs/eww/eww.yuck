@@ -1,0 +1,66 @@
+;; vim: ft=lisp
+
+(defwidget barW []
+	(box 
+			:orientation "h"
+			:class "barW"
+		  :space-evenly true
+		(start-items)
+		(end-items)
+		))
+
+
+(defpoll time
+	:interval "1s"
+	`date +%H:%M:%S`)
+
+(defpoll notification-count
+	:interval "1s"
+	`swaync-client -c`)
+
+(defwidget notification-button []
+	(button :onclick "swaync-client -t"
+		(image :path 
+		  { notification-count > 0 
+			? "${EWW_CONFIG_DIR}/icons/notification-symbolic-msg.svg" 
+			: "${EWW_CONFIG_DIR}/icons/notification-symbolic.svg" })))
+
+(defwidget end-items []
+	(box :halign "end"
+			 :class "end-items"
+			 :orientation "h"
+		time
+		(notification-button)
+		))
+
+(defwidget start-items []
+	(box :halign "start"
+			 :class "start-items"
+			 :orientation "h"
+			 :space-evenly false
+		(button :onclick "~/.scripts/wf-overview expo"
+						:class "expose"
+			"Exposé")
+		(button :onclick "~/.scripts/wf-overview scale"
+			"Overview")
+
+    ;; TODO: Thunar refuses to start without stderr redirection.
+		(button :onclick "thunar ~ 2>/dev/null"
+			"Places")
+		))
+
+(defwindow bar
+           :monitor 0
+           :geometry (geometry :x "0%"
+                               :y "0px"
+                               :width "100%"
+                               :height "20px"
+                               :anchor "top center")
+           :stacking "fg"
+           :reserve (struts :distance "40px" :side "top")
+           :windowtype "toolbar"
+					 :exclusive true
+           :wm-ignore false
+  
+	(barW)
+	)
