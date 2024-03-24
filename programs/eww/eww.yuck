@@ -14,6 +14,15 @@
 	:interval "1s"
 	`date +%H:%M:%S`)
 
+(defpoll battery
+  :interval "10s"
+  `cat /sys/class/power_supply/BAT0/capacity`)
+
+(defpoll battery-connected
+  :interval "1s"
+  `cat /sys/class/power_supply/AC/online`)
+    
+
 (defpoll notification-count
 	:interval "1s"
 	`swaync-client -c`)
@@ -25,10 +34,15 @@
 			? "${EWW_CONFIG_DIR}/icons/notification-symbolic-msg.svg" 
 			: "${EWW_CONFIG_DIR}/icons/notification-symbolic.svg" })))
 
+(defwidget battery-widget []
+  (label
+    :text { (battery-connected == "0") ? "${battery}%" : "" }))
+
 (defwidget end-items []
 	(box :halign "end"
 			 :class "end-items"
 			 :orientation "h"
+    (battery-widget)
 		time
 		(notification-button)
 		))

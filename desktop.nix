@@ -22,7 +22,6 @@
     openFirewall = true;
   };
 
-
   programs.wayfire = {
     enable = true;
     plugins = with pkgs.wayfirePlugins; [ wayfire-plugins-extra ];

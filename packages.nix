@@ -8,6 +8,7 @@
     android-tools
     anki
     brightnessctl
+    cabal-install
     calc
     cmake
     dconf
@@ -21,6 +22,7 @@
     foot
     gcc
     gcc-arm-embedded-10
+    ghc
     gimp
     git
     gnumake
@@ -46,6 +48,7 @@
     pfetch
     pipewire
     python3
+    qemu
     rofi
     sbt-with-scala-native
     scala-cli
@@ -58,6 +61,7 @@
     swaynotificationcenter
     sxiv
     syncthing
+    usbutils
     wayfire
     wl-clipboard
     xfce.mousepad
@@ -66,6 +70,7 @@
     xsane
     zathura
     zip
+    zlib
   ];
 
   fonts.packages = with pkgs; [
