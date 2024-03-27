@@ -61,6 +61,7 @@
     swaynotificationcenter
     sxiv
     syncthing
+    texlive.combined.scheme-medium
     usbutils
     wayfire
     wl-clipboard

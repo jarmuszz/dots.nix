@@ -36,6 +36,14 @@
     '';
   };
 
+  services.tlp = {
+    enable = true;
+    settings = {
+      TART_CHARGE_THRESH_BAT0 = 80;
+      STOP_CHARGE_THRESH_BAT0 = 85;
+    };
+  };
+
   # This option defines the first version of NixOS you have installed on this particular machine,
   # and is used to maintain compatibility with application data (e.g. databases) created on older NixOS versions.
   #
