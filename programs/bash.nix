@@ -15,11 +15,6 @@
       snrb = "sudo nrb"; # See bashrcExtra 
     };
 
-    sessionVariables = {
-      # Override for gtk4/libadwaita apps
-      GTK_THEME = config.gtk.theme.name;
-    };
-
     bashrcExtra = ''
       nrb() {
         ( cd ~/.cache/nixos-rebuild/

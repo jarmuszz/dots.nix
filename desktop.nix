@@ -1,6 +1,6 @@
 # vim: expandtab sw=2 ts=2
 
-{ environment, pkgs, ... }: 
+{ environment, pkgs, pkgs-unstabke, ... }: 
 {
   # Pipewire
   security.rtkit.enable = true;
