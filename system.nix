@@ -36,13 +36,15 @@
     '';
   };
 
-  services.tlp = {
-    enable = true;
-    settings = {
-      START_CHARGE_THRESH_BAT0 = 80;
-      STOP_CHARGE_THRESH_BAT0 = 85;
-    };
-  };
+  #services.tlp = {
+  #  enable = true;
+  #  settings = {
+  #    START_CHARGE_THRESH_BAT0 = 80;
+  #    STOP_CHARGE_THRESH_BAT0 = 85;
+  #  };
+  #};
+
+  #services.power-profiles-daemon.enable = false;
 
   # This option defines the first version of NixOS you have installed on this particular machine,
   # and is used to maintain compatibility with application data (e.g. databases) created on older NixOS versions.

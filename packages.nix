@@ -40,6 +40,7 @@
     keepassxc
     libnotify
     libreoffice
+    lm_sensors
     mpdevil
     neofetch
     nixfmt
@@ -63,6 +64,7 @@
     syncthing
     texlive.combined.scheme-medium
     usbutils
+    virtio-win
     wayfire
     wl-clipboard
     xfce.mousepad

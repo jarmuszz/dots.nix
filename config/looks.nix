@@ -10,9 +10,13 @@
 
   gtk = {
     enable = true;
+    #theme = {
+    #  name = "Greybird";
+    #  package = pkgs.greybird;
+    #};
     theme = {
-      name = "Greybird";
-      package = pkgs.greybird;
+      name = "Breeze";
+      package = pkgs.kdePackages.breeze-gtk;
     };
     iconTheme = {
       name = "elementary";
@@ -34,8 +38,11 @@
     "file:///home/jarmusz/Sync"
   ];
 
-  qt = {
-    enable = true;
-    platformTheme = "gtk3";
-  };
+  #qt = {
+  #  enable = true;
+  #  platformTheme = "qtct";
+  #  style.name = "kvantum"
+  #};
+
+
 }

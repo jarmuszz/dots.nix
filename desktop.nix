@@ -27,6 +27,9 @@
     plugins = with pkgs.wayfirePlugins; [ wayfire-plugins-extra ];
   };
 
+  services.xserver.desktopManager.plasma6.enable = true;
+  services.xserver.libinput.enable = true;
+
   # services.greetd = {
   #   enable = true;
   #   settings = {
