@@ -33,9 +33,12 @@
     package = pkgs.nixFlakes;
     extraOptions = ''
       experimental-features = nix-command flakes
+      auto-optimise-store = true
+      keep-outputs = true
     '';
   };
 
+  services.system76-scheduler.enable = true;
   #services.tlp = {
   #  enable = true;
   #  settings = {

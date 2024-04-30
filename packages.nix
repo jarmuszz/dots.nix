@@ -36,6 +36,7 @@
     hunspellDicts.pl_PL
     inkscape-with-extensions
     jetbrains.idea-community
+    kdePackages.qtstyleplugin-kvantum
     kdeconnect
     keepassxc
     libnotify
@@ -59,12 +60,12 @@
     smartmontools
     sshfs
     swaybg
-    swaynotificationcenter
     sxiv
     syncthing
     texlive.combined.scheme-medium
     usbutils
     virtio-win
+    vlc
     wayfire
     wl-clipboard
     xfce.mousepad
