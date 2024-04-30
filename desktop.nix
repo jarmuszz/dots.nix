@@ -30,6 +30,8 @@
   services.xserver.desktopManager.plasma6.enable = true;
   services.xserver.libinput.enable = true;
 
+  programs.ssh.startAgent = true;
+
   # services.greetd = {
   #   enable = true;
   #   settings = {
