@@ -2,7 +2,7 @@
 
 { pkgs, environment, ... }: 
 {
-  networking.firewall.allowedTCPPorts = [ 8384 22000 ];
+  networking.firewall.allowedTCPPorts = [  8384 22000 ];
   networking.firewall.allowedUDPPorts = [ 22000 21027 ];
 
   systemd.tmpfiles.rules = [
@@ -13,20 +13,20 @@
 
   networking.hostId = "dd1a0d61";
 
-  networking.hostName = "acorn"; # Define your hostname.
-  networking.networkmanager.enable = true; # Easiest to use and most distros use this by default.
+  networking.hostName = "acorn";
+  networking.networkmanager.enable = true;
 
   time.timeZone = "Europe/Warsaw";
 
   i18n.defaultLocale = "en_US.UTF-8";
   console = {
     font = "Lat2-Terminus16";
-    useXkbConfig = true; # use xkb.options in tty.
+    useXkbConfig = true;
   };
 
   users.users.jarmusz = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "docker" ]; # Enable ‘sudo’ for the user.
+    extraGroups = [ "wheel" "docker" ];
   };
 
   nix = {
@@ -37,17 +37,6 @@
       keep-outputs = true
     '';
   };
-
-  services.system76-scheduler.enable = true;
-  #services.tlp = {
-  #  enable = true;
-  #  settings = {
-  #    START_CHARGE_THRESH_BAT0 = 80;
-  #    STOP_CHARGE_THRESH_BAT0 = 85;
-  #  };
-  #};
-
-  #services.power-profiles-daemon.enable = false;
 
   # This option defines the first version of NixOS you have installed on this particular machine,
   # and is used to maintain compatibility with application data (e.g. databases) created on older NixOS versions.

@@ -1,6 +1,6 @@
 # vim: expandtab sw=2 ts=2
 
-{ environment, pkgs, pkgs-unstabke, ... }: 
+{ environment, pkgs, ... }: 
 {
   # Pipewire
   security.rtkit.enable = true;
@@ -22,30 +22,22 @@
     openFirewall = true;
   };
 
+  # Wayfire
   programs.wayfire = {
     enable = true;
     plugins = with pkgs.wayfirePlugins; [ wayfire-plugins-extra ];
   };
+  
+  # KDE Plasma
+  services.desktopManager.plasma6.enable = true;
+  services.libinput.enable = true;
 
-  services.xserver.desktopManager.plasma6.enable = true;
-  services.xserver.libinput.enable = true;
-
+  # Autostart SSH Agent
   programs.ssh.startAgent = true;
 
-  # services.greetd = {
-  #   enable = true;
-  #   settings = {
-  #   default_session.command = ''
-  #       ${pkgs.cage}/bin/cage -s -- ${pkgs.greetd.gtkgreet}/bin/gtkgreet -l -c wayfire
-  #     '';
-  #   };
-  # };
-
-  # environment.etc."greetd/environments".text = ''
-  #   wayfire
-  #   bash
-  # '';
-
+  # Steam
   programs.steam.enable = true;
 
+  # Scheduler
+  services.system76-scheduler.enable = true;
 }

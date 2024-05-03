@@ -11,12 +11,6 @@
   outputs = { self, nixpkgs, nixos-hardware, home-manager, ... } @ inputs:
     let
       system = "x86_64-linux";
-      pkgs-stable = import inputs.nixpkgs-stable {
-        system = system;
-        config = {
-          allowUnfree = true;
-        };
-      };
 
       pkgs = import inputs.nixpkgs {
         system = system;
@@ -35,14 +29,14 @@
           ./packages.nix
           ./desktop.nix
           ./hardware.nix
-          ./virt
+          ./virt.nix
           nixos-hardware.nixosModules.lenovo-thinkpad-t480s
 
           home-manager.nixosModules.home-manager {
             home-manager = {
               useGlobalPkgs = true;
               useUserPackages = true;
-              users."jarmusz" = ./hm.nix;
+              users."jarmusz" = ./home-manager;
             };
           }
         ];
