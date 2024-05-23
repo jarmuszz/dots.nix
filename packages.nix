@@ -40,7 +40,7 @@
     kdeconnect
     keepassxc
     libnotify
-    libreoffice
+    libreoffice-qt
     lm_sensors
     mpdevil
     neofetch
@@ -58,12 +58,14 @@
     signal-desktop
     slurp
     smartmontools
+    soulseekqt
     sshfs
     swaybg
     sxiv
     syncthing
     texlive.combined.scheme-medium
     usbutils
+    unzip
     virtio-win
     vlc
     wayfire
@@ -85,5 +87,6 @@
     fira-code
     fira-code-symbols
     mplus-outline-fonts.githubRelease
+    (nerdfonts.override { fonts = [ "MPlus" ]; })
   ];
 }
