@@ -1,6 +1,7 @@
 {
   imports = [
     ./bash.nix
+    ./emacs
     ./eww
     ./git.nix
     ./home-manager.nix

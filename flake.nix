@@ -8,7 +8,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, nixos-hardware, home-manager, ... } @ inputs:
+  outputs = { self, nixpkgs, nixos-hardware, home-manager, emacs-overlay, ... } @ inputs:
     let
       system = "x86_64-linux";
 
@@ -36,6 +36,7 @@
             home-manager = {
               useGlobalPkgs = true;
               useUserPackages = true;
+              backupFileExtension = "hm-backup";
               users."jarmusz" = ./home-manager;
             };
           }

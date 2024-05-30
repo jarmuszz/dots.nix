@@ -7,10 +7,16 @@
     adbfs-rootless
     android-tools
     anki
+    aspell
+    aspellDicts.en
+    aspellDicts.en-computers
+    aspellDicts.en-science
+    aspellDicts.pl
     brightnessctl
     cabal-install
     calc
     cmake
+    coursier
     dconf
     deadbeef
     discord
@@ -35,6 +41,7 @@
     hunspell
     hunspellDicts.pl_PL
     inkscape-with-extensions
+    jdk
     jetbrains.idea-community
     kdePackages.qtstyleplugin-kvantum
     kdeconnect
