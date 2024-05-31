@@ -15,6 +15,7 @@
     brightnessctl
     cabal-install
     calc
+    clang
     cmake
     coursier
     dconf
@@ -52,6 +53,7 @@
     mpdevil
     neofetch
     nixfmt
+    nodejs
     obsidian
     pavucontrol
     pfetch
@@ -71,8 +73,8 @@
     sxiv
     syncthing
     texlive.combined.scheme-medium
-    usbutils
     unzip
+    usbutils
     virtio-win
     vlc
     wayfire
