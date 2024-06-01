@@ -76,6 +76,7 @@
     unzip
     usbutils
     virtio-win
+    visualvm
     vlc
     wayfire
     wl-clipboard
