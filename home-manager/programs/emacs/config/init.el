@@ -1,3 +1,6 @@
+;;; -*- lexical-binding: t -*-
+(require 'cl-lib)
+
 (require 'package)
 (add-to-list 'package-archives
 	     '("melpa" . "https://melpa.org/packages/") t)
@@ -7,15 +10,24 @@
 (setq use-package-always-ensure t)
 
 (use-package undo-tree
-  :config (global-undo-tree-mode 1)
+  :custom
+  (undo-tree-history-directory-alist '((".*" . "~/.cache/undo-tree")))
+  :config
+  (global-undo-tree-mode 1)
+  (defadvice undo-tree-make-history-save-file-name
+    (after undo-tree activate)
+    (setq ad-return-value (concat ad-return-value ".gz")))
   )
 
 (use-package evil
   :requires (undo-tree)
+  :custom
+  (evil-undo-system 'undo-tree)
   :config
-  (setq evil-undo-system "undo-tree")
   (evil-mode 1)
   )
+
+(use-package magit)
 
 (use-package projectile)
 
@@ -23,6 +35,7 @@
   :config
   (treemacs-follow-mode 1)
   (treemacs-indent-guide-mode 1)
+  (evil-define-key 'normal 'global [f12] #'treemacs)
   (define-key treemacs-mode-map [mouse-1] #'treemacs-single-click-expand-action)
   )
 (use-package treemacs-evil
@@ -68,9 +81,11 @@
   (org-roam-dailies-directory *org-directory*)
   :config
   (evil-define-key 'normal 'global
-    (kbd "SPC O") 'org-roam-node-find
+    (kbd "SPC O")   'org-roam-node-find
     (kbd "SPC r c") 'org-roam-capture
-    (kbd "SPC r i") 'org-roam-node-insert)
+    (kbd "SPC r i") 'org-roam-node-insert
+    (kbd "SPC r 1") 'org-roam-dailies-goto-today
+    (kbd "SPC r d") 'org-roam-dailies-goto-date)
   (setq org-roam-node-display-template
 	(concat "${title:*} " (propertize "${tags:10}" 'face 'org-tag)))
   (org-roam-db-autosync-mode)
@@ -81,9 +96,9 @@
 
 ;; Looks
 (setq inhibit-startup-screen nil)
-(when (or (display-graphic-p) (server-running-p))
-    (set-frame-font " M+CodeLat50 Nerd Font Mono 12" nil t)
-    (pixel-scroll-precision-mode))
+(setq default-frame-alist '((font . " M+CodeLat50 Nerd Font Mono 12" )))
+(when (display-graphic-p)
+  (pixel-scroll-precision-mode))
 
 ;; Programming
 (add-to-list 'load-path "~/.config/emacs/lisp")

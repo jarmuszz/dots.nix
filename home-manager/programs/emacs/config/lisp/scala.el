@@ -23,11 +23,11 @@
 
 (use-package lsp-mode
   :hook
-  (scal-mode . lsp)
+  (scala-mode . lsp)
   (lsp-mode . lsp-lens-mode)
 
-  :config
-  (setq lsp-keep-workspace-alive nil)
+  :custom
+  (lsp-keep-workspace-alive nil)
   )
 
 (use-package lsp-metals)
@@ -35,9 +35,8 @@
 (use-package yasnippet)
 
 (use-package company
-  :hook (scala-mode . company-mode)
-  :config
-  (setq lsp-completion-provider :capf)
+  :custom
+  (lsp-completion-provider :capf)
   )
 
 (use-package posframe)
