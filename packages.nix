@@ -23,6 +23,7 @@
     discord
     docker
     docker-compose
+    dwarf-fortress
     elementary-xfce-icon-theme
     file
     firefox
@@ -61,7 +62,7 @@
     python3
     qemu
     rofi
-    sbt-with-scala-native
+    sbt
     scala-cli
     seatd
     signal-desktop
