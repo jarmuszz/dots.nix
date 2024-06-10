@@ -4,6 +4,7 @@
 {
   networking.firewall.allowedTCPPorts = [  8384 22000 ];
   networking.firewall.allowedUDPPorts = [ 22000 21027 ];
+  services.syncthing.openDefaultPorts = true;
 
   systemd.tmpfiles.rules = [
     # Type  Path          Mode  User     Group  Age
