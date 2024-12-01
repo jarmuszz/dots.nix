@@ -25,7 +25,7 @@
   # Wayfire
   programs.wayfire = {
     enable = true;
-    plugins = with pkgs.wayfirePlugins; [ wayfire-plugins-extra ];
+    plugins = with pkgs.wayfirePlugins; [ wayfire-plugins-extra wayfire-shadows ];
   };
 
   services.xserver.displayManager.gdm.enable = true;

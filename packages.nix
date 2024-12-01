@@ -91,8 +91,6 @@
     visualvm
     vlc
     wayfire
-    wayfirePlugins.wayfire-shadows
-    wayfirePlugins.wwp-switcher
     wl-clipboard
     xfce.mousepad
     xfce.thunar
