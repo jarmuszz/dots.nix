@@ -42,6 +42,7 @@
 	(box :halign "end"
 			 :class "end-items"
 			 :orientation "h"
+    (systray :orientation "h")
     (battery-widget)
 		time
 		(notification-button)

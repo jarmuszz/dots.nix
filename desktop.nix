@@ -18,7 +18,7 @@
   services.printing.drivers = with pkgs; [ hplip cnijfilter2 ];
   services.avahi = {
     enable = true;
-    nssmdns = true;
+    nssmdns4 = true;
     openFirewall = true;
   };
 
@@ -27,9 +27,12 @@
     enable = true;
     plugins = with pkgs.wayfirePlugins; [ wayfire-plugins-extra ];
   };
+
+  services.xserver.displayManager.gdm.enable = true;
+  services.xserver.displayManager.gdm.wayland = true;
   
   # KDE Plasma
-  services.desktopManager.plasma6.enable = true;
+  #services.desktopManager.plasma6.enable = true;
   services.libinput.enable = true;
 
   # Autostart SSH Agent
@@ -40,4 +43,7 @@
 
   # Scheduler
   services.system76-scheduler.enable = true;
+
+  # CPUpower-GUI
+  services.cpupower-gui.enable = true;
 }

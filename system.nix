@@ -27,11 +27,11 @@
 
   users.users.jarmusz = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "docker" ];
+    extraGroups = [ "kvm" "adbusers" "wheel" "docker" ];
   };
 
   nix = {
-    package = pkgs.nixFlakes;
+    #package = pkgs.nixFlakes;
     extraOptions = ''
       experimental-features = nix-command flakes
       auto-optimise-store = true

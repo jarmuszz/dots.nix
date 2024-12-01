@@ -25,9 +25,11 @@
     docker-compose
     dwarf-fortress
     elementary-xfce-icon-theme
+    ffmpeg
     file
     firefox
     foot
+    gammastep
     gcc
     gcc-arm-embedded-10
     ghc
@@ -45,22 +47,27 @@
     inkscape-with-extensions
     jdk
     jetbrains.idea-community
+    kdePackages.qt6ct
     kdePackages.qtstyleplugin-kvantum
-    kdeconnect
     keepassxc
     libnotify
     libreoffice-qt
     lm_sensors
+    mpc
     mpdevil
+    msgpack-tools
     neofetch
     nixfmt
     nodejs
     obsidian
-    pavucontrol
     pfetch
     pipewire
+    plasma5Packages.kdeconnect-kde
+    pwvucontrol
     python3
+    python312Packages.dbus-python
     qemu
+    racket
     rofi
     sbt
     scala-cli
@@ -70,7 +77,11 @@
     smartmontools
     soulseekqt
     sshfs
+    swappy
     swaybg
+    swayidle
+    swaylock
+    swaynotificationcenter
     sxiv
     syncthing
     texlive.combined.scheme-medium
@@ -80,11 +91,14 @@
     visualvm
     vlc
     wayfire
+    wayfirePlugins.wayfire-shadows
+    wayfirePlugins.wwp-switcher
     wl-clipboard
     xfce.mousepad
     xfce.thunar
     xfce.thunar-volman
     xsane
+    xwaylandvideobridge
     zathura
     zip
     zlib
@@ -92,7 +106,7 @@
 
   fonts.packages = with pkgs; [
     noto-fonts
-    noto-fonts-cjk
+    noto-fonts-cjk-sans
     noto-fonts-emoji
     liberation_ttf
     fira-code

@@ -3,6 +3,7 @@
     ./bash.nix
     ./emacs
     ./eww
+    ./gammastep.nix
     ./git.nix
     ./home-manager.nix
     ./ncmpcpp.nix

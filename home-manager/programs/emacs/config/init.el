@@ -8,6 +8,7 @@
 
 (require 'use-package-ensure)
 (setq use-package-always-ensure t)
+(load-theme 'modus-operandi)
 
 (use-package undo-tree
   :custom
@@ -68,6 +69,9 @@
 
 ;;; Scala
 (require 'scala)
+
+;;; Haskell
+(require 'haskell)
 
 ;;; Nix
 (use-package nix-mode

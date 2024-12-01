@@ -15,11 +15,25 @@
   )
 
 (use-package org
+  :requires evil
   :config
   (add-hook 'org-mode-hook #'company-mode)
+  (add-hook 'org-agenda-mode-hook #'org-agenda-follow-mode)
   (evil-define-key 'normal 'global
     (kbd "SPC o a") #'org-agenda
     (kbd "SPC C")   #'org-capture)
+
+  (evil-set-initial-state 'org-agenda-mode 'motion)
+  (evil-define-key 'motion org-agenda-mode-map
+    "j" #'org-agenda-next-line
+    "k" #'org-agenda-previous-line
+    "l" #'org-agenda-later
+    "h" #'org-agenda-earlier
+    "gg" #'evil-window-top
+    "G" #'evil-window-bottom
+    (kbd "<return>") #'org-agenda-goto
+    (kbd "SPC g") #'org-agenda-goto-date
+    )
   :custom
   (org-agenda-files (list *org-directory*))
   (org-agenda-span 14)
