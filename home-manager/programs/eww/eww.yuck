@@ -2,9 +2,9 @@
 
 (defwidget barW []
 	(box 
-			:orientation "h"
-			:class "barW"
-		  :space-evenly true
+		:orientation "h"
+		:class "barW"
+	  :space-evenly true
 		(start-items)
 		(end-items)
 		))
@@ -42,8 +42,10 @@
 	(box :halign "end"
 			 :class "end-items"
 			 :orientation "h"
-    (systray :orientation "h")
     (battery-widget)
+    (systray 
+      :orientation "h"
+      :spacing 5)
 		time
 		(notification-button)
 		))

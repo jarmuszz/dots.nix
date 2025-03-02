@@ -28,9 +28,6 @@
     plugins = with pkgs.wayfirePlugins; [ wayfire-plugins-extra wayfire-shadows ];
   };
 
-  services.xserver.displayManager.gdm.enable = true;
-  services.xserver.displayManager.gdm.wayland = true;
-  
   # KDE Plasma
   #services.desktopManager.plasma6.enable = true;
   services.libinput.enable = true;

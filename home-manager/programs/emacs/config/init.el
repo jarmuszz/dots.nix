@@ -55,7 +55,7 @@
 
 ;; Looks
 (setq inhibit-startup-screen nil)
-(setq default-frame-alist '((font . " M+CodeLat50 Nerd Font Mono 12" )))
+(setq default-frame-alist '((font . " Go Mono 12" )))
 (when (display-graphic-p)
   (pixel-scroll-precision-mode))
 
@@ -76,11 +76,20 @@
 ;;; Nix
 (use-package nix-mode
   :mode "\\.nix\\'")
+
+;;; Agda
+(load-file (let ((coding-system-for-read 'utf-8))
+                (shell-command-to-string "agda-mode locate")))
+
+
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(custom-safe-themes
+   '("ecd76ed4cdfc0534b90b663fb18afdd18bd29d7f40761f658d995c9a82f6490b" default))
  '(package-selected-packages
    '(deft yasnippet undo-tree treemacs-projectile treemacs-evil sbt-mode org-roam org-modern nix-mode neotree magit lsp-ui lsp-metals flycheck company color-theme-sanityinc-tomorrow base16-theme))
  '(warning-suppress-types '((comp))))

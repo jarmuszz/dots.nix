@@ -29,6 +29,7 @@
     file
     firefox
     foot
+    fzf
     gammastep
     gcc
     gcc-arm-embedded-10
@@ -39,14 +40,17 @@
     go-font
     greybird
     grim
+    haskellPackages.Agda
+    helix
     helvum
     home-manager
     htop
     hunspell
     hunspellDicts.pl_PL
+    imagemagick
     inkscape-with-extensions
     jdk
-    jetbrains.idea-community
+    jetbrains.idea-community-bin
     kdePackages.qt6ct
     kdePackages.qtstyleplugin-kvantum
     keepassxc
@@ -55,11 +59,11 @@
     lm_sensors
     mpc
     mpdevil
-    msgpack-tools
     neofetch
     nixfmt
     nodejs
     obsidian
+    pandoc
     pfetch
     pipewire
     plasma5Packages.kdeconnect-kde
@@ -67,6 +71,7 @@
     python3
     python312Packages.dbus-python
     qemu
+    #quirks.idea-community
     racket
     rofi
     sbt
@@ -77,6 +82,7 @@
     smartmontools
     soulseekqt
     sshfs
+    sublime-music
     swappy
     swaybg
     swayidle
@@ -85,16 +91,19 @@
     sxiv
     syncthing
     texlive.combined.scheme-medium
+    tutanota-desktop
     unzip
     usbutils
     virtio-win
     visualvm
     vlc
+    wabt
     wayfire
     wl-clipboard
     xfce.mousepad
     xfce.thunar
     xfce.thunar-volman
+    xfce.tumbler
     xsane
     xwaylandvideobridge
     zathura
@@ -110,6 +119,6 @@
     fira-code
     fira-code-symbols
     mplus-outline-fonts.githubRelease
-    (nerdfonts.override { fonts = [ "MPlus" ]; })
+    nerd-fonts.mplus
   ];
 }
