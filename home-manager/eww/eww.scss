@@ -1,0 +1,58 @@
+* {
+	color: #fff;
+	background-color: #000;
+}
+
+
+/*
+.background {
+	background: linear-gradient(#dbdbdb, #cdcdcd);
+	border-bottom: grey 1px solid;
+}
+*/
+
+/* General */
+button {
+	margin-right: 0;
+	padding: 0.25em;
+	border-color: transparent;
+}
+
+button:hover {
+	background: linear-gradient(#d6d6d6, #c2c2c2);
+	border-color: grey;
+}
+
+button:active {
+	background: inherit;
+	background: linear-gradient(#c1c1c1, #b8b8b8);
+}
+
+/* Start Items */
+.start-items > button {
+	margin-right: 0.5em;
+	padding: 0.25em;
+	border-color: transparent;
+}
+
+.start-items > button:hover {
+	background: linear-gradient(#d6d6d6, #c2c2c2);
+	border-color: grey;
+}
+
+.start-items > button:active {
+	background: inherit;
+	background: linear-gradient(#c1c1c1, #b8b8b8);
+}
+
+// A little more space on the left
+.start-items > button.expose {
+	padding-left: .5em;
+}
+
+/* End Items */
+.end-items > button {
+	margin-left: 0.5em;
+	padding: 0;
+}
+
