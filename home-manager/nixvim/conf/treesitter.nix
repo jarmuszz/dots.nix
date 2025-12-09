@@ -10,6 +10,8 @@
         "python"
         "haskell"
         "rust"
+        "lua"
+        "kotlin"
       ];
       incremental_selection = {
         enable = true;

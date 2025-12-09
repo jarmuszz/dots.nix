@@ -23,9 +23,10 @@
     discord
     docker
     docker-compose
-    dosbox
+    dosbox-x
     dwarf-fortress
     easyeffects
+    emacs-pgtk
     ffmpeg
     file
     firefox
@@ -40,6 +41,7 @@
     gnome-tweaks
     gnumake
     gnupg
+    graphviz
     go-font
     gsettings-desktop-schemas
     gtk4.dev
@@ -50,14 +52,17 @@
     imagemagick
     inkscape-with-extensions
     jdk
-    jetbrains.idea-community-bin
+    jetbrains.idea-ultimate
+    jujutsu
     kdePackages.kdeconnect-kde
-    kdePackages.xwaylandvideobridge
+    #kdePackages.xwaylandvideobridge
     keepassxc
     krita
+    lean4
     libinput
     libnotify
-    libreoffice
+    libreoffice-qt6-fresh
+    lisgd
     lm_sensors
     maliit-keyboard
     metals
@@ -82,7 +87,7 @@
     qemu
     racket
     rakudo
-    rnote
+    #rnote-old
     rofi
     rofi
     sbt
@@ -94,7 +99,7 @@
     supersonic
     swaybg
     swaylock
-    swaynotificationcenter
+    #swaynotificationcenter
     sxiv
     texlive.combined.scheme-medium
     unrar
@@ -124,6 +129,6 @@
     nerd-fonts."m+"
     noto-fonts
     noto-fonts-cjk-sans
-    noto-fonts-emoji
+    noto-fonts-color-emoji
   ];
 }

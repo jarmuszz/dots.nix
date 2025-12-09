@@ -14,13 +14,32 @@
   networking.hostName = "hrairoo";
   networking.hostId = "132abd7c";
   networking.networkmanager.enable = true;
+  #networking.wireless.iwd.enable = true;
+  #networking.networkmanager.wifi.backend = "iwd";
 
   time.timeZone = "Europe/Warsaw";
 
   # Locales
-  i18n.extraLocales = [
-    "pl_PL.UTF-8/UTF-8"
-  ];
+  # i18n.extraLocales = [
+  #   "pl_PL.UTF-8/UTF-8"
+  # ];
+
+  i18n.extraLocaleSettings = {
+    LANG="en_US.UTF-8";
+    LC_CTYPE="en_US.UTF-8";
+    LC_NUMERIC="en_US.UTF-8";
+    LC_TIME="pl_PL.UTF-8";
+    LC_COLLATE="en_US.UTF-8";
+    LC_MONETARY="pl_PL.UTF-8";
+    LC_MESSAGES="en_US.UTF-8";
+    LC_PAPER="pl_PL.UTF-8";
+    LC_NAME="pl_PL.UTF-8";
+    LC_ADDRESS="pl_PL.UTF-8";
+    LC_TELEPHONE="pl_PL.UTF-8";
+    LC_MEASUREMENT="pl_PL.UTF-8";
+    LC_IDENTIFICATION="en_US.UTF-8";
+    LC_ALL="en_US.UTF-8";
+  };
 
   i18n.defaultLocale = "en_US.UTF-8";
 
@@ -35,7 +54,7 @@
   programs.niri.enable = true;
   programs.wayfire = {
     enable = true;
-    plugins = with pkgs.wayfirePlugins; [ wayfire-plugins-extra wayfire-shadows ];
+    plugins = with pkgs.wayfirePlugins; [ wayfire-plugins-extra ];
   };
   programs.labwc.enable = true;
 
