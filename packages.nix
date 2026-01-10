@@ -12,6 +12,7 @@
     aspellDicts.en-computers
     aspellDicts.en-science
     aspellDicts.pl
+    blueman
     calc
     cargo
     clang
@@ -55,9 +56,10 @@
     jetbrains.idea-ultimate
     jujutsu
     kdePackages.kdeconnect-kde
-    #kdePackages.xwaylandvideobridge
+    kdePackages.plasma-keyboard
     keepassxc
     krita
+    ktailctl
     lean4
     libinput
     libnotify
@@ -99,7 +101,7 @@
     supersonic
     swaybg
     swaylock
-    #swaynotificationcenter
+    swaynotificationcenter
     sxiv
     texlive.combined.scheme-medium
     unrar
@@ -109,13 +111,17 @@
     virtio-win
     visualvm
     vlc
+    waybar
+    wireguard-tools
     wl-clipboard
     wvkbd
     xfce.mousepad
     xfce.thunar
     xfce.thunar-volman
+    xfce.xfce4-appfinder
     xournalpp
     xsane
+    xwayland-satellite
     zathura
     zip
     zlib

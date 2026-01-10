@@ -59,8 +59,9 @@
   programs.labwc.enable = true;
 
   services.desktopManager.plasma6.enable = true;
-  services.displayManager.sddm.enable = true;
-  services.displayManager.sddm.wayland.enable = true; 
+  services.displayManager.sddm.enable = false;
+  #services.displayManager.sddm.wayland.enable = true; 
+  
 
   programs.gtklock = {
     enable = true;
@@ -91,7 +92,7 @@
   services.printing.enable = true;
   services.printing.drivers = with pkgs; [
     hplip
-    cnijfilter2
+    #cnijfilter2 # waiting for #477193 to be merged
   ];
   services.zfs.trim.enable = true;
 
@@ -123,12 +124,60 @@
   services.system76-scheduler.enable = true;
   programs.steam.enable = true;
   services.flatpak.enable = true;
+  services.tailscale.enable = true;
+
+  # # samba
+  # services.samba = {
+  #   enable = true;
+  #   securityType = "user";
+  #   openFirewall = true;
+  # 
+  #   shares = {
+  #     ziutek = {
+  #       "path" = "/mnt/samba/ziutek";
+  #       "browseable" = "yes";
+  #       "read only" = "no";
+  #       "guest ok" = "no";
+  #       "create mask" = "0644";
+  #       "directory mask" = "0755";
+  #       "force user" = "jarmuszz";
+  #       "force group" = "users";
+  #     };
+  #   };
+
+  #   settings = {
+  #     global = {
+  #       "workgroup" = "WORKGROUP";
+  #       "server string" = "smbnix";
+  #       "netbios name" = "smbnix";
+  #       "security" = "user";
+  #       "hosts allow" = "100.64.0 127.0.0.1 localhost";
+  #       "hosts deny" = "0.0.0.0/0";
+  #       "guest account" = "nobody";
+  #       "map to guest" = "bad user";
+  #     };
+  #     private = {
+  #       "path" = "/mnt/samba/private";
+  #       "browseable" = "yes";
+  #       "read only" = "no";
+  #       "guest ok" = "no";
+  #       "create mask" = "0644";
+  #       "directory mask" = "0755";
+  #       "force user" = "jarmuszz";
+  #       "force group" = "users";
+  #     };
+  #   };
+  # };
+  services.samba-wsdd = {
+    enable = true;
+    openFirewall = true;
+  };
 
   # Other
 
   users.users.jarmusz = {
     isNormalUser = true;
-    extraGroups = [ "wheel" ];
+    extraGroups = [ "wheel" "input" ];
   };
 
   nix = {

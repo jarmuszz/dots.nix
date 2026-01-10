@@ -9,6 +9,7 @@
     ./syncthing.nix
     ./user.nix
     ./dirs.nix
+    ./portals.nix
     ./nixvim
   ];
 }
