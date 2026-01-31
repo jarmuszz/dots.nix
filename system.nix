@@ -51,7 +51,10 @@
   # Desktop.
   services.displayManager.gdm.enable = false;
   services.desktopManager.gnome.enable = true;
-  programs.niri.enable = true;
+  programs.niri = {
+    enable = true;
+    package = pkgs.niri-touch;
+  };
   programs.wayfire = {
     enable = true;
     plugins = with pkgs.wayfirePlugins; [ wayfire-plugins-extra ];

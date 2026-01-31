@@ -12,6 +12,10 @@
       url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    niri-touch-gestures = {
+      url = "github:Atan-D-RP4/niri?branch=feat/touch-gestures";
+    };
   };
 
   outputs =
@@ -21,6 +25,7 @@
       nixos-hardware,
       home-manager,
       nixvim,
+      niri-touch-gestures,
       ...
     }@inputs:
     let
@@ -38,6 +43,18 @@
         system = arch;
         modules = [
           nixos-hardware.nixosModules.framework-12-13th-gen-intel
+
+          {
+              nixpkgs.overlays = [
+                (final: prev: 
+                  {
+                    niri-touch = niri-touch-gestures.packages.${prev.system}.niri;
+                  }
+                )
+              ];
+          }
+
+          ./overlays/niri-touch-gestures.nix
 
           ./boot.nix
           ./hardware.nix
