@@ -12,6 +12,7 @@
     aspellDicts.en-computers
     aspellDicts.en-science
     aspellDicts.pl
+    bc
     blueman
     calc
     cargo
@@ -44,6 +45,7 @@
     gnupg
     graphviz
     go-font
+    grim
     gsettings-desktop-schemas
     gtk4.dev
     helix
@@ -52,6 +54,7 @@
     hunspellDicts.pl_PL
     imagemagick
     inkscape-with-extensions
+    inotify-tools
     jdk
     jetbrains.idea-ultimate
     jujutsu
@@ -89,15 +92,17 @@
     qemu
     racket
     rakudo
-    #rnote-old
+    rnote
     rofi
     rofi
+    satty
     sbt
     scala-cli
     signal-desktop
     smartmontools
     squeekboard
     sshfs
+    slurp
     supersonic
     swaybg
     swaylock
@@ -111,6 +116,8 @@
     virtio-win
     visualvm
     vlc
+    wabt
+    wasmtime
     waybar
     wireguard-tools
     wl-clipboard
@@ -125,6 +132,7 @@
     zathura
     zip
     zlib
+    zotero
     ];
 
   fonts.packages = with pkgs; [
