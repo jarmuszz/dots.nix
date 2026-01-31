@@ -112,6 +112,7 @@
     unrar
     unzip
     usbutils
+    veloren
     vim
     virtio-win
     visualvm
