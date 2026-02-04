@@ -56,7 +56,7 @@
     inkscape-with-extensions
     inotify-tools
     jdk
-    jetbrains.idea-ultimate
+    jetbrains.idea
     jujutsu
     kdePackages.kdeconnect-kde
     kdePackages.plasma-keyboard
@@ -120,8 +120,10 @@
     wabt
     wasmtime
     waybar
+    wf-recorder
     wireguard-tools
     wl-clipboard
+    wtype
     wvkbd
     xfce.mousepad
     xfce.thunar

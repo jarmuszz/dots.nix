@@ -54,8 +54,6 @@
               ];
           }
 
-          ./overlays/niri-touch-gestures.nix
-
           ./boot.nix
           ./hardware.nix
           ./packages.nix
