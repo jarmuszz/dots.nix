@@ -1,7 +1,7 @@
 {
   opts.termguicolors = true;
-  opts.background = "dark";
-  colorschemes.everforest = {
+  opts.background = "light";
+  colorschemes.modus = {
     enable = true;
   };
 }
