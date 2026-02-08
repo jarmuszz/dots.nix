@@ -7,6 +7,7 @@
     shellAliases = {
       G = "grep -r";
       v = "vim";
+      ls = "ls -F";
       l = "ls -l";
       ll = "ls -l";
       ".." = "cd ..";
@@ -15,5 +16,17 @@
       sudo = "sudo ";
       userctl = "systemctl --user";
     };
+
+    bashrcExtra = '' # bash
+      prompt() {
+        if [ -n "''${IN_NIX_SHELL}" ]; then
+          PS1="(dev)% "
+        else
+          PS1="% "
+        fi
+      }
+
+      PROMPT_COMMAND=prompt
+    '';
   };
 }
