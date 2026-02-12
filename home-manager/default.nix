@@ -4,6 +4,7 @@
     nixvim.homeModules.nixvim
 
     ./bash.nix
+    ./foot.nix
     ./eww
     ./gnome.nix
     ./syncthing.nix
