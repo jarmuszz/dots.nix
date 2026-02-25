@@ -58,7 +58,7 @@
     jdk
     jetbrains.idea
     jujutsu
-    kdePackages.kdeconnect-kde
+    #kdePackages.kdeconnect-kde
     kdePackages.plasma-keyboard
     keepassxc
     krita
