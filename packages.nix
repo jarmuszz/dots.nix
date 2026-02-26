@@ -76,7 +76,6 @@
     neofetch
     nicotine-plus
     nixfmt
-    nixfmt-rfc-style
     nixfmt-tree
     nodejs
     nvd
@@ -136,7 +135,7 @@
     zip
     zlib
     zotero
-    ];
+  ];
 
   fonts.packages = with pkgs; [
     fira-code
