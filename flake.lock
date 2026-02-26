@@ -91,13 +91,29 @@
         "type": "github"
       }
     },
+    "nixpkgs-build-inputs-fix": {
+      "locked": {
+        "lastModified": 1772035393,
+        "narHash": "sha256-BhiRSl5smJTAiTQ2+kgxyRdN6twMjnq48cYzq1sRUFo=",
+        "owner": "DarkKirb",
+        "repo": "nixpkgs",
+        "rev": "f0d576a127e78044495c0758613bc5fdd053ed23",
+        "type": "github"
+      },
+      "original": {
+        "owner": "DarkKirb",
+        "ref": "push-qnynkxqmwysm",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
     "nixpkgs-master": {
       "locked": {
-        "lastModified": 1772099839,
-        "narHash": "sha256-By5Vp0IrcyQcFwKYbJIU5CAxAyG5ipXZMaqB162osZ4=",
+        "lastModified": 1772104158,
+        "narHash": "sha256-7rdGIAv5r+U7bp2Tv05j/EUTFXXj7tyjjDJxWzJc5CE=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "881516049dba80b44917ec96e7b76fdeb52dca50",
+        "rev": "b5fe9b338b972e1333f1b61de878ef62be7a7f1a",
         "type": "github"
       },
       "original": {
@@ -151,6 +167,7 @@
         "niri-touch-gestures": "niri-touch-gestures",
         "nixos-hardware": "nixos-hardware",
         "nixpkgs": "nixpkgs_2",
+        "nixpkgs-build-inputs-fix": "nixpkgs-build-inputs-fix",
         "nixpkgs-master": "nixpkgs-master",
         "nixvim": "nixvim"
       }
