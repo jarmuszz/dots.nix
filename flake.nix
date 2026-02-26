@@ -20,14 +20,13 @@
 
   outputs =
     {
-      self,
       nixpkgs,
       nixos-hardware,
       home-manager,
       nixvim,
       niri-touch-gestures,
       ...
-    }@inputs:
+    }:
     let
       arch = "x86_64-linux";
 
