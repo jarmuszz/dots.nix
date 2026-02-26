@@ -47,7 +47,7 @@
               nixpkgs.overlays = [
                 (final: prev: 
                   {
-                    niri-touch = niri-touch-gestures.packages.${prev.system}.niri;
+                    niri-touch = niri-touch-gestures.packages.${prev.stdenv.hostPlatform.system}.niri;
                   }
                 )
               ];
