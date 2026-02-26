@@ -40,7 +40,6 @@
     gimp3
     git
     glib.dev
-    gnome-tweaks
     gnumake
     gnupg
     graphviz
