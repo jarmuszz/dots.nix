@@ -1,0 +1,48 @@
+Change "read-only config" error messages to mention Home Manager.
+Remove "Access error for config file" error on startup. 
+
+Soruce: https://github.com/nix-community/home-manager/pull/5641#issuecomment-2267559316
+
+--- a/src/gui/ApplicationSettingsWidget.cpp
++++ b/src/gui/ApplicationSettingsWidget.cpp
+@@ -197,7 +197,8 @@
+ void ApplicationSettingsWidget::loadSettings()
+ {
+     if (config()->hasAccessError()) {
+-        showMessage(tr("Access error for config file %1").arg(config()->getFileName()), MessageWidget::Error);
++	 showMessage(tr("Config file is managed declaratively by Home Manager. "
++                       "Any setting changed here will not be saved."), MessageWidget::Error);
+     }
+ 
+ #ifdef QT_DEBUG
+@@ -343,7 +344,8 @@
+ void ApplicationSettingsWidget::saveSettings()
+ {
+     if (config()->hasAccessError()) {
+-        showMessage(tr("Access error for config file %1").arg(config()->getFileName()), MessageWidget::Error);
++        showMessage(tr("Config file is managed declaratively by Home Manager. "
++                       "Settings can't be changed from here."), MessageWidget::Error);
+         // We prevent closing the settings page if we could not write to
+         // the config file.
+         return;
+@@ -477,7 +479,8 @@
+     }
+ 
+     if (config()->hasAccessError()) {
+-        showMessage(tr("Access error for config file %1").arg(config()->getFileName()), MessageWidget::Error);
++        showMessage(tr("Config file is managed declaratively by Home Manager. "
++                       "Settings can't be reset from here."), MessageWidget::Error);
+         // We prevent closing the settings page if we could not write to
+         // the config file.
+         return;
+--- a/src/gui/MainWindow.cpp
++++ b/src/gui/MainWindow.cpp
+@@ -623,8 +623,6 @@
+     connect(&m_trayIconTriggerTimer, SIGNAL(timeout()), SLOT(processTrayIconTrigger()));
+ 
+     if (config()->hasAccessError()) {
+-        m_ui->globalMessageWidget->showMessage(tr("Access error for config file %1").arg(config()->getFileName()),
+-                                               MessageWidget::Error);
+     }
+ 
+     // Properly shutdown on logoff, restart, and shutdown
