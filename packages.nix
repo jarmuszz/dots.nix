@@ -125,10 +125,10 @@
     wl-clipboard
     wtype
     wvkbd
-    xfce.mousepad
-    xfce.thunar
-    xfce.thunar-volman
-    xfce.xfce4-appfinder
+    mousepad
+    thunar
+    thunar-volman
+    xfce4-appfinder
     xournalpp
     xsane
     xwayland-satellite
