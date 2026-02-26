@@ -25,20 +25,20 @@
   # ];
 
   i18n.extraLocaleSettings = {
-    LANG="en_US.UTF-8";
-    LC_CTYPE="en_US.UTF-8";
-    LC_NUMERIC="en_US.UTF-8";
-    LC_TIME="pl_PL.UTF-8";
-    LC_COLLATE="en_US.UTF-8";
-    LC_MONETARY="pl_PL.UTF-8";
-    LC_MESSAGES="en_US.UTF-8";
-    LC_PAPER="pl_PL.UTF-8";
-    LC_NAME="pl_PL.UTF-8";
-    LC_ADDRESS="pl_PL.UTF-8";
-    LC_TELEPHONE="pl_PL.UTF-8";
-    LC_MEASUREMENT="pl_PL.UTF-8";
-    LC_IDENTIFICATION="en_US.UTF-8";
-    LC_ALL="en_US.UTF-8";
+    LANG = "en_US.UTF-8";
+    LC_CTYPE = "en_US.UTF-8";
+    LC_NUMERIC = "en_US.UTF-8";
+    LC_TIME = "pl_PL.UTF-8";
+    LC_COLLATE = "en_US.UTF-8";
+    LC_MONETARY = "pl_PL.UTF-8";
+    LC_MESSAGES = "en_US.UTF-8";
+    LC_PAPER = "pl_PL.UTF-8";
+    LC_NAME = "pl_PL.UTF-8";
+    LC_ADDRESS = "pl_PL.UTF-8";
+    LC_TELEPHONE = "pl_PL.UTF-8";
+    LC_MEASUREMENT = "pl_PL.UTF-8";
+    LC_IDENTIFICATION = "en_US.UTF-8";
+    LC_ALL = "en_US.UTF-8";
   };
 
   i18n.defaultLocale = "en_US.UTF-8";
@@ -63,8 +63,7 @@
 
   services.desktopManager.plasma6.enable = true;
   services.displayManager.sddm.enable = false;
-  #services.displayManager.sddm.wayland.enable = true; 
-  
+  #services.displayManager.sddm.wayland.enable = true;
 
   programs.gtklock = {
     enable = true;
@@ -86,8 +85,7 @@
     enable = true;
   };
 
-  
- services.logind.settings.Login = {
+  services.logind.settings.Login = {
     HandlePowerKey = "suspend";
   };
 
@@ -134,7 +132,7 @@
   #   enable = true;
   #   securityType = "user";
   #   openFirewall = true;
-  # 
+  #
   #   shares = {
   #     ziutek = {
   #       "path" = "/mnt/samba/ziutek";
@@ -180,7 +178,10 @@
 
   users.users.jarmusz = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "input" ];
+    extraGroups = [
+      "wheel"
+      "input"
+    ];
   };
 
   nix = {

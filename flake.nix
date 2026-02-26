@@ -44,13 +44,11 @@
           nixos-hardware.nixosModules.framework-12-13th-gen-intel
 
           {
-              nixpkgs.overlays = [
-                (final: prev: 
-                  {
-                    niri-touch = niri-touch-gestures.packages.${prev.stdenv.hostPlatform.system}.niri;
-                  }
-                )
-              ];
+            nixpkgs.overlays = [
+              (final: prev: {
+                niri-touch = niri-touch-gestures.packages.${prev.stdenv.hostPlatform.system}.niri;
+              })
+            ];
           }
 
           ./boot.nix

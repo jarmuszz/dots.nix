@@ -16,12 +16,12 @@
       enable = true;
       settings = {
         lookahead = true;
-            keymaps = {
-            ab = "@block.outer";
-            ib = "@block.inner";
-            ac = "@call.outer";
-            ic = "@call.inner";
-          };
+        keymaps = {
+          ab = "@block.outer";
+          ib = "@block.inner";
+          ac = "@call.outer";
+          ic = "@call.inner";
+        };
       };
     };
   };
