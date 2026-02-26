@@ -60,7 +60,6 @@
     jujutsu
     #kdePackages.kdeconnect-kde
     kdePackages.plasma-keyboard
-    keepassxc
     krita
     ktailctl
     lean4

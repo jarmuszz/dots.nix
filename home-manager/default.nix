@@ -4,13 +4,14 @@
     nixvim.homeModules.nixvim
 
     ./bash.nix
-    ./foot.nix
+    ./dirs.nix
     ./eww
+    ./foot.nix
     ./gnome.nix
+    ./keepassxc.nix
+    ./nixvim
+    ./portals.nix
     ./syncthing.nix
     ./user.nix
-    ./dirs.nix
-    ./portals.nix
-    ./nixvim
   ];
 }
