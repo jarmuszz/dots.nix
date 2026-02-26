@@ -1,10 +1,4 @@
-# Edit this configuration file to define what should be installed on
-# your system. Help is available in the configuration.nix(5) man page, on
-# https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
-
 {
-  config,
-  lib,
   pkgs,
   ...
 }:
@@ -14,15 +8,8 @@
   networking.hostName = "hrairoo";
   networking.hostId = "132abd7c";
   networking.networkmanager.enable = true;
-  #networking.wireless.iwd.enable = true;
-  #networking.networkmanager.wifi.backend = "iwd";
 
   time.timeZone = "Europe/Warsaw";
-
-  # Locales
-  # i18n.extraLocales = [
-  #   "pl_PL.UTF-8/UTF-8"
-  # ];
 
   i18n.extraLocaleSettings = {
     LANG = "en_US.UTF-8";
@@ -48,22 +35,24 @@
     useXkbConfig = true; # use xkb.options in tty.
   };
 
-  # Desktop.
+  # Desktop
   services.displayManager.gdm.enable = false;
-  services.desktopManager.gnome.enable = true;
+  services.desktopManager.gnome.enable = false;
+
   programs.niri = {
     enable = true;
     package = pkgs.niri-touch;
   };
+
   programs.wayfire = {
     enable = true;
     plugins = with pkgs.wayfirePlugins; [ wayfire-plugins-extra ];
   };
+
   programs.labwc.enable = true;
 
   services.desktopManager.plasma6.enable = true;
   services.displayManager.sddm.enable = false;
-  #services.displayManager.sddm.wayland.enable = true;
 
   programs.gtklock = {
     enable = true;
@@ -81,9 +70,7 @@
     wrapperFeatures.gtk = true;
   };
 
-  xdg.portal.wlr = {
-    enable = true;
-  };
+  xdg.portal.wlr.enable = true;
 
   services.logind.settings.Login = {
     HandlePowerKey = "suspend";
@@ -93,7 +80,7 @@
   services.printing.enable = true;
   services.printing.drivers = with pkgs; [
     hplip
-    #cnijfilter2 # waiting for #477193 to be merged
+    cnijfilter2
   ];
   services.zfs.trim.enable = true;
 
@@ -115,9 +102,6 @@
   };
   services.libinput = {
     enable = true;
-    # touchpad = {
-    # 	accelSpeed = "0.3";
-    # };
   };
 
   services.fwupd.enable = true;
@@ -127,55 +111,7 @@
   services.flatpak.enable = true;
   services.tailscale.enable = true;
 
-  # # samba
-  # services.samba = {
-  #   enable = true;
-  #   securityType = "user";
-  #   openFirewall = true;
-  #
-  #   shares = {
-  #     ziutek = {
-  #       "path" = "/mnt/samba/ziutek";
-  #       "browseable" = "yes";
-  #       "read only" = "no";
-  #       "guest ok" = "no";
-  #       "create mask" = "0644";
-  #       "directory mask" = "0755";
-  #       "force user" = "jarmuszz";
-  #       "force group" = "users";
-  #     };
-  #   };
-
-  #   settings = {
-  #     global = {
-  #       "workgroup" = "WORKGROUP";
-  #       "server string" = "smbnix";
-  #       "netbios name" = "smbnix";
-  #       "security" = "user";
-  #       "hosts allow" = "100.64.0 127.0.0.1 localhost";
-  #       "hosts deny" = "0.0.0.0/0";
-  #       "guest account" = "nobody";
-  #       "map to guest" = "bad user";
-  #     };
-  #     private = {
-  #       "path" = "/mnt/samba/private";
-  #       "browseable" = "yes";
-  #       "read only" = "no";
-  #       "guest ok" = "no";
-  #       "create mask" = "0644";
-  #       "directory mask" = "0755";
-  #       "force user" = "jarmuszz";
-  #       "force group" = "users";
-  #     };
-  #   };
-  # };
-  services.samba-wsdd = {
-    enable = true;
-    openFirewall = true;
-  };
-
   # Other
-
   users.users.jarmusz = {
     isNormalUser = true;
     extraGroups = [
