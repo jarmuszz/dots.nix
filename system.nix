@@ -3,7 +3,6 @@
   ...
 }:
 {
-
   # Networking
   networking.hostName = "hrairoo";
   networking.hostId = "132abd7c";
@@ -38,6 +37,7 @@
   # Desktop
   services.displayManager.gdm.enable = false;
   services.desktopManager.gnome.enable = false;
+  services.gnome.gnome-keyring.enable = false;
 
   programs.niri = {
     enable = true;
