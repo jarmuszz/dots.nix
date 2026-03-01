@@ -19,6 +19,7 @@
     clang
     clisp
     cmake
+    coppwr
     coursier
     dconf
     dconf-editor
