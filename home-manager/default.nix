@@ -11,6 +11,7 @@
     ./keepassxc.nix
     ./nixvim
     ./portals.nix
+    ./ssh-agent.nix
     ./syncthing.nix
     ./user.nix
     ./waybar
