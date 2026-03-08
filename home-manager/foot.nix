@@ -13,24 +13,23 @@
       };
 
       colors = {
-        background = "ffffff";
+        background = "fbf7f0";
         foreground = "000000";
 
-        regular0 = "242424"; # black
-        regular1 = "f62b5a"; # red
-        regular2 = "00aa00"; # green
-        regular3 = "f68a2b"; # yellow
-        regular4 = "6877ff"; # blue
-        regular5 = "cb4dd9"; # magenta
-        regular6 = "0094ab"; # cyan
+        regular0 = "242424";
+        regular1 = "a60000";
+        regular2 = "006800";
+        regular3 = "6f5500";
+        regular4 = "0031a9";
+        regular5 = "721045";
+        regular6 = "005e8b";
 
-        bright0 = "242424"; # black
-        bright1 = "f62b5a"; # red
-        bright2 = "00aa00"; # green
-        bright3 = "e3c401"; # yellow
-        bright4 = "6877ff"; # blue
-        bright5 = "cb4dd9"; # magenta
-        bright6 = "0094ab"; # cyan
+        bright1 = "972500";
+        bright2 = "316500";
+        bright3 = "884900";
+        bright4 = "3548cf";
+        bright5 = "8f0075";
+        bright6 = "3f578f";
       };
 
       csd = {
