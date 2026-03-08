@@ -3,6 +3,6 @@
   opts.background = "light";
   colorschemes.modus = {
     enable = true;
-    variang = "tinted";
+    settings.variant = "tinted";
   };
 }
