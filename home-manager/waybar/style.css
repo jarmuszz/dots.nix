@@ -1,0 +1,142 @@
+* {
+  /* `otf-font-awesome` is required to be installed for icons */
+  font-family: GoMono, Roboto, Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  transition: none;
+}
+
+window#waybar {
+  background-color: transparent;
+  color: #000;
+}
+
+/* Free space on left and right */
+.modules-right {
+  margin-right: 1em;
+  margin-bottom: 0.5em;
+}
+
+.modules-left {
+  margin-left: 1em;
+  margin-bottom: 0.5em;
+}
+
+#custom-kbd,
+#custom-kbd-close,
+#custom-launch,
+#custom-screenshot,
+#workspaces button,
+#workspaces button .focused,
+#workspaces button :hover,
+#clock,
+#battery,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#wireplumber,
+#custom-media,
+#tray,
+#mode,
+#idle_inhibitor,
+#scratchpad,
+#power-profiles-daemon,
+#mpd {
+  color: black;
+  background-color: #fbf7f0;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  border: 1px solid black;
+  border-radius: 0;
+  background-image: none;
+  text-shadow: none;
+  box-shadow: none;
+}
+
+/* If workspaces is the leftmost module, omit left margin */
+.modules-left > widget:first-child > #workspaces {
+  margin-left: 0;
+}
+
+/* If workspaces is the rightmost module, omit right margin */
+.modules-right > widget:last-child > #workspaces {
+  margin-right: 0;
+}
+
+#clock {
+  background-color: #fbf7f0;
+  color: black;
+}
+
+#battery {
+  background-color: #e0f6e0;
+  color: #000000;
+}
+
+#battery.charging, #battery.plugged {
+  color: black;
+  background-color: #b3fabf;
+}
+
+#power-profiles-daemon {
+  background-color: #ffe8e8;
+  color: black;
+}
+
+#network {
+  background-color: #ecedff;
+  color: #000;
+}
+
+#pulseaudio {
+  background-color: #ffddff;
+  color: black;
+}
+
+#pulseaudio.muted {
+  background-color: #f8e6f5;
+}
+
+#tray {
+  background-color: #fbf7f0;
+  color: black;
+}
+
+#tray > .passive {
+  -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+  -gtk-icon-effect: highlight;
+  background-color: #eb4d4b;
+}
+
+#workspaces button {
+  background-color: black;
+  color: white;
+  padding: 0 5px;
+}
+
+#privacy {
+  padding: 0;
+}
+
+#privacy-item {
+  padding: 0 5px;
+  color: white;
+}
+
+#privacy-item.screenshare {
+  background-color: #cf5700;
+}
+
+#privacy-item.audio-in {
+  background-color: #1ca000;
+}
+
+#privacy-item.audio-out {
+  background-color: #0069d4;
+}

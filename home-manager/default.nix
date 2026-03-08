@@ -13,5 +13,6 @@
     ./portals.nix
     ./syncthing.nix
     ./user.nix
+    ./waybar
   ];
 }
