@@ -12,6 +12,7 @@
     ./nixvim
     ./portals.nix
     ./ssh-agent.nix
+    ./swaync.nix
     ./syncthing.nix
     ./user.nix
     ./waybar
