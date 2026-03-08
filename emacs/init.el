@@ -4,13 +4,15 @@
              '("melpa" . "http://melpa.org/packages/") t)
 
 (setq backup-directory-alist '(("." . "~/.cache/emacs-backups")))
-(load-theme 'modus-vivendi)
+(load-theme 'modus-operandi-tinted)
 (pixel-scroll-precision-mode)
 (setq org-agenda-start-on-weekday 1)
 (setq calendar-week-start-day 1)
 
-(set-face-attribute 'default nil :family "M+1Code Nerd Font" :height 120)
-(set-face-attribute 'variable-pitch nil :family "M+1 Nerd Font" :height 120)
+;(set-face-attribute 'default nil :family "M+1Code Nerd Font" :height 120)
+;(set-face-attribute 'variable-pitch nil :family "M+1 Nerd Font" :height 120)
+(set-face-attribute 'default nil :family "Go Mono" :height 110)
+(set-face-attribute 'variable-pitch nil :family "Go Mono" :height 110)
 
 (defconst *roam-dir* "~/docs/roam")
 
@@ -48,16 +50,16 @@
      ("s" "Studia"
       ((tags-todo "+studia")))
      ))
-  (org-agenda-skip-timestamp-if-done t)
   (org-agenda-skip-deadline-if-done t)
   (org-agenda-skip-scheduled-if-done t)
   (org-agenda-skip-scheduled-if-deadline-is-shown t)
   (org-agenda-skip-deadline-if-schedule-is-shown t)
   :init
   (require 'org-crypt)
-  ;(org-crypt-use-before-save-magic)
   (setenv "GPG_AGENT_INFO" nil)
-  ;(evil-set-initial-state 'org-agenda-mode 'emacs)
+
+  :hook
+  (org-mode . org-indent-mode)
   )
 
 (use-package org-modern
@@ -70,7 +72,7 @@
   (org-modern-hide-stars "  ")
   (org-modern-list '((43 . "▹") (45 . "–") (42 . "•")))
   (org-modern-progress 8)
-  (org-modern-replace-stars "◉↪•◈◇✳")
+  (org-modern-replace-stars "✱↪↪↪↪↪↪")
   (org-modern-star 'replace)
   (org-modern-tag-faces
    '(("praca" :background "green")
@@ -123,7 +125,6 @@
   (org-roam-setup)
   )
 
-
 (use-package undo-tree
   :ensure t
   :custom
@@ -172,16 +173,53 @@
   (add-to-list 'evil-emacs-state-modes 'calfw-calendar-mode)
   )
 
+(use-package citar
+  :ensure t
+  :after (vertico orderless embark marginalia)
+  :custom
+  (citar-bibliography org-cite-global-bibliography)
+  (citar-notes-paths (list (concat *roam-dir* "/citar-notes")))
+  )
+
+(use-package vertico
+  :ensure t
+  :init
+  (vertico-mode)
+  )
+
+(use-package orderless
+  :ensure t
+  :custom
+  (completion-styles '(orderless basic))
+  (completion-category-overrides '((file (styles partial-completion))))
+  (completion-pcm-leading-wildcard t)
+  )
+
+(use-package marginalia
+  :ensure t
+  :config
+  (marginalia-mode))
+
+(use-package embark
+  :ensure t
+  :after (evil marginalia)
+  :init
+  (evil-define-key 'insert 'global (kbd "C-M-i") 'embark-act)
+  (evil-define-key 'insert 'global (kbd "C-M-o") 'embark-dwim)
+  )
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages
-   '(calfw calfw-org evil-org org-modern org-roam-ui undo-tree))
+ '(custom-safe-themes
+   '("f1c8202c772d1de83eda4765fe21429a528a4fb350a28394d3705fe9678ed1f9"
+     default))
+ '(package-selected-packages nil)
  '(safe-local-variable-values
-   '((eval auto-save-mode nil) (backup-inhibited) (auto-save-default)
-     (auto-fill-mode . 1))))
+   '((eval set-fill-column 80) (eval auto-save-mode nil)
+     (backup-inhibited) (auto-save-default) (auto-fill-mode . 1))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
