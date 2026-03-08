@@ -7,7 +7,7 @@
     shellAliases = {
       G = "grep -r";
       v = "vim";
-      ls = "ls -F";
+      ls = "ls -F --color=yes";
       l = "ls -l";
       ll = "ls -l";
       ".." = "cd ..";
