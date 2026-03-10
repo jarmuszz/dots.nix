@@ -110,6 +110,9 @@
   programs.steam.enable = true;
   services.flatpak.enable = true;
   services.tailscale.enable = true;
+  hardware.sane.enable = true;
+  services.avahi.enable = true;
+  services.avahi.nssmdns = true;
 
   # Other
   users.users.jarmusz = {
@@ -117,6 +120,8 @@
     extraGroups = [
       "wheel"
       "input"
+      "scanner"
+      "lp"
     ];
   };
 
