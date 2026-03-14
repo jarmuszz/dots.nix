@@ -29,6 +29,7 @@
     dosbox-x
     dwarf-fortress
     easyeffects
+    elementary-xfce-icon-theme
     emacs-pgtk
     ffmpeg
     file
@@ -43,8 +44,8 @@
     glib.dev
     gnumake
     gnupg
-    graphviz
     go-font
+    graphviz
     grim
     gsettings-desktop-schemas
     gtk4.dev
@@ -71,6 +72,7 @@
     maliit-keyboard
     metals
     morewaita-icon-theme
+    mousepad
     nasm
     neofetch
     nicotine-plus
@@ -97,16 +99,18 @@
     sbt
     scala-cli
     signal-desktop
+    slurp
     smartmontools
     squeekboard
     sshfs
-    slurp
     supersonic
     swaybg
     swaylock
     swaynotificationcenter
     sxiv
     texlive.combined.scheme-medium
+    thunar
+    thunar-volman
     unrar
     unzip
     usbutils
@@ -123,9 +127,6 @@
     wl-clipboard
     wtype
     wvkbd
-    mousepad
-    thunar
-    thunar-volman
     xfce4-appfinder
     xournalpp
     xsane
