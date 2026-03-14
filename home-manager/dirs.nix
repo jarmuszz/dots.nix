@@ -7,6 +7,7 @@
     {
       enable = true;
       documents = inHome "docs";
+      desktop = inHome "stmp";
       download = inHome "dls";
       music = inHome "music";
       pictures = inHome "other/pics";
