@@ -113,6 +113,7 @@
   hardware.sane.enable = true;
   services.avahi.enable = true;
   services.avahi.nssmdns = true;
+  programs.nix-ld.enable = true;
 
   # Other
   users.users.jarmusz = {

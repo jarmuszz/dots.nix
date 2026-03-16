@@ -74,7 +74,6 @@
     morewaita-icon-theme
     mousepad
     nasm
-    neofetch
     nicotine-plus
     nixfmt
     nixfmt-tree
@@ -114,6 +113,7 @@
     unrar
     unzip
     usbutils
+    uv
     veloren
     vim
     virtio-win
