@@ -8,6 +8,7 @@
     efiSupport = true;
     enableCryptodisk = true;
     timeoutStyle = "hidden";
+    configurationLimit = 16;
   };
 
   boot.initrd.luks.devices = {
