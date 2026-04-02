@@ -14,6 +14,8 @@
 (set-face-attribute 'default nil :family "Go Mono" :height 110)
 (set-face-attribute 'variable-pitch nil :family "Go Mono" :height 110)
 
+(setq-default line-spacing 5)
+
 (defconst *roam-dir* "~/docs/roam")
 
 (use-package org
@@ -31,15 +33,16 @@
 
   (org-agenda-prefix-format
    '(
-     (agenda . "    %t ")
-     (todo .   "    %t ")
-     (tags .   "    %t ")
-     (search . "    %t")
+     (agenda . "  %t% s ")
+     (todo .   "  %t% s ")
+     (tags .   "  %t% s ")
+     (search . "  %t% s ")
    ))
 
   (org-hide-emphasis-markers nil)
   (org-pretty-entities t)
-  (org-agenda-tags-column 0)
+  ;(org-agenda-tags-column 0)
+  (org-agenda-remove-tags t)
   (org-ellipsis "…")
   (org-cite-global-bibliography '("~/docs/roam/bibtex/main.bib"))
   (org-tags-exclude-from-inheritance '("crytp"))
@@ -50,6 +53,13 @@
      ("s" "Studia"
       ((tags-todo "+studia")))
      ))
+  (org-agenda-format-date
+   (lambda (date) (concat
+		    "\n"
+		    (make-string (window-width) 9472)
+		    "\n"
+		    (org-agenda-format-date-aligned date))))
+
   (org-agenda-skip-deadline-if-done t)
   (org-agenda-skip-scheduled-if-done t)
   (org-agenda-skip-scheduled-if-deadline-is-shown t)
@@ -62,24 +72,32 @@
   (org-mode . org-indent-mode)
   )
 
-(use-package org-modern
+; (use-package org-modern
+;   :ensure t
+;   :after org
+;   :init
+;   (global-org-modern-mode)
+;   :custom
+;   (org-fold-catch-invisible-edits 'show-and-error)
+;   (org-modern-hide-stars "  ")
+;   (org-modern-list '((43 . "▹") (45 . "–") (42 . "•")))
+;   (org-modern-progress 8)
+;   (org-modern-replace-stars "✱↪↪↪↪↪↪")
+;   (org-modern-star 'replace)
+;   (org-modern-tag-faces
+;    '(("praca" :background "green")
+;      ("egz"   :background "red")
+;      ("urodziny" :background "purple")
+;      ("święta" :background "purple")
+;    ))
+;   )
+
+(use-package org-superstar
   :ensure t
   :after org
-  :init
-  (global-org-modern-mode)
   :custom
-  (org-fold-catch-invisible-edits 'show-and-error)
-  (org-modern-hide-stars "  ")
-  (org-modern-list '((43 . "▹") (45 . "–") (42 . "•")))
-  (org-modern-progress 8)
-  (org-modern-replace-stars "✱↪↪↪↪↪↪")
-  (org-modern-star 'replace)
-  (org-modern-tag-faces
-   '(("praca" :background "green")
-     ("egz"   :background "red")
-     ("urodziny" :background "purple")
-     ("święta" :background "purple")
-   ))
+  (org-superstar-headline-bullets-list '("✱" "↪" "↪" "↪" "↪" "↪" "↪" "↪" "↪" "↪"))
+  :hook (org-mode . org-superstar-mode)
   )
 
 (use-package org-roam
@@ -173,6 +191,21 @@
   (add-to-list 'evil-emacs-state-modes 'calfw-calendar-mode)
   )
 
+(use-package org-super-agenda
+  :ensure t
+  :custom
+  (org-super-agenda-groups
+   '(
+     (:name "Studia" :tag "studia")
+     (:name "Praca" :tag "praca")
+     (:name "Wyjścia" :tag "event")
+     (:name "GSoC" :file-path ".*gsoc.*")
+     ))
+
+  ;:init
+  ;(org-super-agenda-mode)
+  )
+
 (use-package citar
   :ensure t
   :after (vertico orderless embark marginalia)
@@ -216,6 +249,7 @@
  '(custom-safe-themes
    '("f1c8202c772d1de83eda4765fe21429a528a4fb350a28394d3705fe9678ed1f9"
      default))
+ '(org-fold-catch-invisible-edits 'show-and-error nil nil "Customized with use-package org")
  '(package-selected-packages nil)
  '(safe-local-variable-values
    '((eval set-fill-column 80) (eval auto-save-mode nil)
