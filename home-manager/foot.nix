@@ -12,7 +12,7 @@
         lines = 5000; # stacktraces :)
       };
 
-      colors = {
+      colors-dark = {
         background = "fbf7f0";
         foreground = "000000";
 
