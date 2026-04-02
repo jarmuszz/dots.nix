@@ -1,9 +1,7 @@
 {
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    nixpkgs-master.url = "github:NixOS/nixpkgs/master";
     nixos-hardware.url = "github:NixOS/nixos-hardware";
-    nixpkgs-build-inputs-fix.url = "github:DarkKirb/nixpkgs/push-qnynkxqmwysm";
 
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -23,8 +21,6 @@
   outputs =
     {
       nixpkgs,
-      nixpkgs-master,
-      nixpkgs-build-inputs-fix,
       nixos-hardware,
       home-manager,
       nixvim,
@@ -51,8 +47,6 @@
             nixpkgs.overlays = [
               (final: prev: {
                 niri-touch = niri-touch-gestures.packages.${prev.stdenv.hostPlatform.system}.niri;
-                krita = nixpkgs-master.legacyPackages.${arch}.krita;
-                anki = nixpkgs-build-inputs-fix.legacyPackages.${arch}.anki;
               })
             ];
           }
