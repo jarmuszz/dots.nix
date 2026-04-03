@@ -15,19 +15,21 @@
       la = "ls -a";
       sudo = "sudo ";
       userctl = "systemctl --user";
+
+      n = "nix";
+      dev = "nix develop";
     };
 
     bashrcExtra = ''
-      # bash
-           prompt() {
-             if [ -n "''${IN_NIX_SHELL}" ]; then
-               PS1="(dev)% "
-             else
-               PS1="% "
-             fi
-           }
+       prompt() {
+         if [ -n "''${IN_NIX_SHELL}" ]; then
+           PS1="(dev)% "
+         else
+           PS1="% "
+         fi
+       }
 
-           PROMPT_COMMAND=prompt
+       PROMPT_COMMAND=prompt
     '';
   };
 }
