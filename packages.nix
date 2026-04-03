@@ -84,6 +84,7 @@
     pango
     phinger-cursors
     pkg-config
+    plan9port-wayland
     plasma-panel-colorizer
     ptyxis
     pwvucontrol
