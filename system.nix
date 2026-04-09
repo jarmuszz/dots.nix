@@ -41,7 +41,7 @@
 
   programs.niri = {
     enable = true;
-    package = pkgs.niri-touch;
+    package = pkgs.niri;
   };
 
   programs.wayfire = {

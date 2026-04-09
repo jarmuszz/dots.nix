@@ -74,6 +74,7 @@
     morewaita-icon-theme
     mousepad
     nasm
+    newsboat
     nicotine-plus
     nixfmt
     nixfmt-tree
