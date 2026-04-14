@@ -8,6 +8,7 @@
 window#waybar {
   background-color: transparent;
   color: #000;
+  margin-top: 1em;
 }
 
 /* Free space on left and right */
