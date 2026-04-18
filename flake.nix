@@ -18,12 +18,11 @@
   outputs =
     {
       nixpkgs,
-      nixpkgs-master,
       nixos-hardware,
       home-manager,
       nixvim,
       ...
-    }:
+    } @ inputs:
     let
       arch = "x86_64-linux";
 
@@ -32,22 +31,17 @@
         config.allowUnfree = true;
       };
 
+
     in
     {
       formatter.x86_64-linux = pkgs.nixfmt-tree;
       nixosConfigurations.hrairoo = nixpkgs.lib.nixosSystem {
         system = arch;
+        specialArgs = { inherit inputs; };
         modules = [
           nixos-hardware.nixosModules.framework-12-13th-gen-intel
 
-          {
-            nixpkgs.overlays = [
-              ./overlays/rnote-master.nix
-              #(final: prev: {
-              #  rnote = nixpkgs-master.legacyPackages.${arch}.rnote;
-              #})
-            ];
-          }
+          ./overlays
 
           ./boot.nix
           ./hardware.nix

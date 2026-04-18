@@ -1,4 +1,4 @@
-{ nixpkgs-master, arch, ... }: 
-    final: prev: {
-      rnote = nixpkgs-master.legacyPackages.${arch}.rnote;
-    }
+{ inputs, ... }: 
+  (final: prev: {
+    rnote = inputs.nixpkgs-master.legacyPackages.${prev.stdenv.hostPlatform.system}.rnote;
+  })
