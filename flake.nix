@@ -1,6 +1,7 @@
 {
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixpkgs-master.url = "github:NixOS/nixpkgs/master";
     nixos-hardware.url = "github:NixOS/nixos-hardware";
 
     home-manager = {
@@ -12,19 +13,15 @@
       url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    niri-touch-gestures = {
-      url = "github:Atan-D-RP4/niri?branch=feat/touch-gestures";
-    };
   };
 
   outputs =
     {
       nixpkgs,
+      nixpkgs-master,
       nixos-hardware,
       home-manager,
       nixvim,
-      niri-touch-gestures,
       ...
     }:
     let
@@ -45,9 +42,10 @@
 
           {
             nixpkgs.overlays = [
-              (final: prev: {
-                niri-touch = niri-touch-gestures.packages.${prev.stdenv.hostPlatform.system}.niri;
-              })
+              ./overlays/rnote-master.nix
+              #(final: prev: {
+              #  rnote = nixpkgs-master.legacyPackages.${arch}.rnote;
+              #})
             ];
           }
 
