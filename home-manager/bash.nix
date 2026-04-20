@@ -15,6 +15,8 @@
       la = "ls -a";
       sudo = "sudo ";
       userctl = "systemctl --user";
+      "%" = " ";
+      "dev%" = " ";
 
       n = "nix";
       dev = "nix develop";
@@ -23,7 +25,7 @@
     bashrcExtra = ''
        prompt() {
          if [ -n "''${IN_NIX_SHELL}" ]; then
-           PS1="(dev)% "
+           PS1="dev% "
          else
            PS1="% "
          fi
