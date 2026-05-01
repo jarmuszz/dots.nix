@@ -57,6 +57,13 @@
             local metals_config = require('metals').bare_config()
             metals_config.init_options.statusBarProvider = 'off' -- managed by figlet
 
+            metals_config.settings = {
+              serverVersion = "2.0.0-M11",
+              --serverVersion = "1.6.7",
+              --serverProperties = { "-Xmx6g" },
+            }
+
+
             -- metals_config.capabilities = require('cmp_nvim_lsp').default_capabilities()
 
             require("metals").initialize_or_attach(metals_config)

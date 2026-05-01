@@ -56,10 +56,9 @@
     imagemagick
     inkscape-with-extensions
     inotify-tools
-    jdk
+    jdk25
     jetbrains.idea
     jujutsu
-    #kdePackages.kdeconnect-kde
     kdePackages.plasma-keyboard
     krita
     ktailctl
