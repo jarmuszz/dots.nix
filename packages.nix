@@ -81,6 +81,7 @@
     nodejs
     nvd
     nwg-drawer
+    obsidian
     pandoc
     pango
     phinger-cursors
