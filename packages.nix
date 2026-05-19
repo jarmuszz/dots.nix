@@ -145,6 +145,8 @@
     fira-code-symbols
     liberation_ttf
     mplus-outline-fonts.githubRelease
+    corefonts
+    vista-fonts
     nerd-fonts."m+"
     noto-fonts
     noto-fonts-cjk-sans
