@@ -93,6 +93,7 @@
     qemu
     racket
     rakudo
+    ripgrep
     rnote
     rofi
     rofi
