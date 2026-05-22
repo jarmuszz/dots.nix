@@ -4,7 +4,7 @@
     ./looks.nix
     ./lsp.nix
     ./metals.nix
-    ./neo-tree.nix
+    ./nvim-tree.nix
     ./options.nix
     ./plugins.nix
     ./telescope.nix
