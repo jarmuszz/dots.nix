@@ -58,9 +58,7 @@
             metals_config.init_options.statusBarProvider = 'off' -- managed by figlet
 
             metals_config.settings = {
-              serverVersion = "2.0.0-M11",
-              --serverVersion = "1.6.7",
-              --serverProperties = { "-Xmx6g" },
+              serverVersion = "2.0.0-M13",
             }
 
 
