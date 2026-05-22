@@ -5,7 +5,6 @@
 
     ./bash.nix
     ./dirs.nix
-    ./eww
     ./foot.nix
     ./gnome.nix
     ./keepassxc.nix
