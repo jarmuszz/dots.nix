@@ -44,10 +44,10 @@
     package = pkgs.niri;
   };
 
-  programs.wayfire = {
-    enable = true;
-    plugins = with pkgs.wayfirePlugins; [ wayfire-plugins-extra ];
-  };
+  #programs.wayfire = {
+  #  enable = true;
+  #  plugins = with pkgs.wayfirePlugins; [ wayfire-plugins-extra ];
+  #};
 
   programs.labwc.enable = true;
 
