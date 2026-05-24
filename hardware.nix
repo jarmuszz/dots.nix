@@ -30,7 +30,10 @@
     "zfs"
     "fat32"
   ];
+
   boot.tmp.useTmpfs = true;
+
+  boot.zfs.forceImportRoot = false;
 
   fileSystems."/" = {
     device = "rpool/root";
