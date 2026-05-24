@@ -45,6 +45,7 @@
     gnumake
     gnupg
     go-font
+    gram
     graphviz
     grim
     gsettings-desktop-schemas
