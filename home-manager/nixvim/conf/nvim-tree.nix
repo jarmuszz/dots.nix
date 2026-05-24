@@ -7,7 +7,7 @@
   keymaps = [
     {
       key = "<F12>";
-      action = "<cmd>NvimTreeTohhle<CR>";
+      action = "<cmd>NvimTreeToggle<CR>";
     }
   ];
 }
