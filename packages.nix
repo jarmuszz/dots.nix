@@ -81,6 +81,7 @@
     nodejs
     nvd
     nwg-drawer
+    niri-scratchpad
     obsidian
     pandoc
     pango
