@@ -1,6 +1,7 @@
 inputs:
   let
     overlayFiles = [
+      ./gram-master.nix
       ./rnote-master.nix
     ];
 
