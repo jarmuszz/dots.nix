@@ -117,7 +117,6 @@
     unzip
     usbutils
     uv
-    veloren
     vim
     virtio-win
     visualvm
