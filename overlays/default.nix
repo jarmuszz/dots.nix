@@ -3,7 +3,6 @@ inputs:
     overlayFiles = [
       ./gram-master.nix
       ./niri-scratchpad.nix
-      ./rnote-master.nix
     ];
 
     importOverlay = file: (import file inputs);
