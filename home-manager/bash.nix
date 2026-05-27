@@ -5,6 +5,7 @@
     historySize = -1;
 
     shellAliases = {
+      agenda = "emacs --no-splash -T org-agenda -f org-agenda";
       G = "grep -r";
       v = "vim";
       ls = "ls -F --color=yes";
