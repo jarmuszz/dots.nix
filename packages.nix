@@ -23,6 +23,7 @@
     coursier
     dconf
     dconf-editor
+    dig
     discord
     docker
     docker-compose
