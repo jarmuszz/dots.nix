@@ -52,7 +52,8 @@
   programs.labwc.enable = true;
 
   services.desktopManager.plasma6.enable = true;
-  services.displayManager.sddm.enable = false;
+  services.desktopManager.plasma6.enableQt5Integration = true;
+  services.displayManager.plasma-login-manager.enable = true;
 
   programs.gtklock = {
     enable = true;

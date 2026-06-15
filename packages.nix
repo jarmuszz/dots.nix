@@ -13,7 +13,6 @@
     aspellDicts.en-science
     aspellDicts.pl
     bc
-    blueman
     calc
     cargo
     clang
@@ -62,6 +61,8 @@
     jetbrains.idea
     jujutsu
     kdePackages.plasma-keyboard
+    kdePackages.oxygen
+    kdePackages.oxygen-icons
     krita
     ktailctl
     lean4
@@ -111,7 +112,6 @@
     supersonic
     swaybg
     swaylock
-    swaynotificationcenter
     sxiv
     texlive.combined.scheme-medium
     thunar
