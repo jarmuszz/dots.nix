@@ -1,8 +1,7 @@
 {
   opts.termguicolors = true;
-  opts.background = "light";
+  opts.background = "dark";
   colorschemes.modus = {
     enable = true;
-    settings.variant = "tinted";
   };
 }
