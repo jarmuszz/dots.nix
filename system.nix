@@ -115,7 +115,17 @@
   services.avahi.enable = true;
   services.avahi.nssmdns = true;
   programs.nix-ld.enable = true;
-  services.mullvad-vpn.enable = true;
+
+  services.openssh = {
+    enable = true;
+    openFirewall = true;
+    settings = {
+      UseDns = true;
+      PasswordAuthentication = false;
+      PermitRootLogin = "no";
+      AllowUsers = [ "jarmusz" ];
+    };
+  };
 
   # Other
   users.users.jarmusz = {
@@ -130,10 +140,10 @@
 
   nix = {
     extraOptions = ''
-      			experimental-features = nix-command flakes
-      			auto-optimise-store = true
-      			keep-outputs = true
-      		'';
+      experimental-features = nix-command flakes
+      auto-optimise-store = true
+      keep-outputs = true
+    '';
   };
 
   systemd.tmpfiles.rules = [
