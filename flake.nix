@@ -1,7 +1,6 @@
 {
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    nixpkgs-master.url = "github:NixOS/nixpkgs/master";
     nixos-hardware.url = "github:NixOS/nixos-hardware";
 
     home-manager = {
@@ -26,7 +25,6 @@
       nixos-hardware,
       home-manager,
       nixvim,
-      niri-scratchpad-flake,
       ...
     } @ inputs:
     let
